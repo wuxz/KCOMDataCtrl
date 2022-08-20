@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{AC21265A-FBE2-11D2-A7FE-0080C8763FA4} = s 'KCOMDBGrid'
+		'KCOMDBGrid.EXE'
+		{
+			val AppID = s {AC21265A-FBE2-11D2-A7FE-0080C8763FA4}
+		}
+	}
+}

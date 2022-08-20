@@ -1,0 +1,313 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""l.chs\\afxctl.h""\r\n"
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "BHM\0"
+            VALUE "FileDescription", "KCOMDBGrid ActiveX Control Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "KCOMDBGrid\0"
+            VALUE "LegalCopyright", "版权所有 (C) 1999\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "KCOMDBGrid.OCX\0"
+            VALUE "ProductName", "KCOMDBGrid ActiveX Control Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ABOUTDLL            ICON    DISCARDABLE     "..\\KCOMDBGrid.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_KCOMDBGRID          BITMAP  DISCARDABLE     "..\\KCOMDBGridCtl.bmp"
+IDB_BITMAP_HEADER       BITMAP  DISCARDABLE     "..\\bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX_KCOMDBGRID DIALOG DISCARDABLE  34, 22, 231, 100
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 KCOMDBGrid 控件"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDI_ABOUTDLL,IDC_STATIC,10,10,21,23
+    LTEXT           "KCOMDBGrid Control, Version 1.0",IDC_STATIC,40,10,132,8
+    LTEXT           "版权所有 (C) 1999, KCOMSoft",IDC_STATIC,40,25,99,8
+    DEFPUSHBUTTON   "确定",IDOK,187,7,32,14,WS_GROUP
+    LTEXT           "特别感谢 Chris Maunder 先生提供表格窗口类。\n\nchrismaunder@codeguru.com",
+                    IDC_STATIC,38,46,109,47
+END
+
+IDD_PROPPAGE_KCOMDBGRID DIALOG DISCARDABLE  0, 0, 286, 161
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,15,13,104,134
+    LTEXT           "数据来源(&M)",IDC_STATIC,22,28,46,8
+    COMBOBOX        IDC_COMBO_DATAMODE,72,25,39,61,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "状态列(&S)",IDC_CHECK_SHOWRECORDSELECTOR,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,27,45,77,10
+    CONTROL         "允许添加(&N)",IDC_CHECK_ALLOWADDNEW,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,27,61,77,10
+    CONTROL         "允许删除(&D)",IDC_CHECK_ALLOWDELETE,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,27,77,77,10
+    CONTROL         "只读(&R)",IDC_CHECK_READONLY,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | WS_TABSTOP,27,93,77,10
+    CONTROL         "光标键导航(&A)",IDC_CHECK_ALLOWARROWKEYS,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,27,109,77,10
+    CONTROL         "允许调整行高(&H)",IDC_CHECK_ALLOWAROWRESIZING,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,27,125,77,10
+    CONTROL         "行数(&W)",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,130,28,27,11
+    EDITTEXT        IDC_EDIT_ROWS,161,25,27,15,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_ROWS,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,188,29,12,12
+    CONTROL         "列数(&C)",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,198,28,30,13
+    EDITTEXT        IDC_EDIT_COLS,229,25,29,15,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_COLS,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,267,25,12,12
+    LTEXT           "缺省列宽(&W)",IDC_STATIC,130,53,49,8
+    EDITTEXT        IDC_EDIT_DEFCOLWIDTH,193,51,65,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "标题行高度(&H)",IDC_STATIC,130,78,50,8
+    EDITTEXT        IDC_EDIT_HEADERHEIGHT,193,75,65,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "行高(&R)",IDC_STATIC,130,101,36,8
+    EDITTEXT        IDC_EDIT_ROWHEIGHT,193,99,65,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "表格线风格(&L)",IDC_STATIC,130,128,62,8
+    COMBOBOX        IDC_COMBO_GRIDLINESTYLE,193,124,65,61,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PROPPAGE_KCOMDBGRID_COLUMNS DIALOG DISCARDABLE  0, 0, 187, 132
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "列号(&C)",IDC_STATIC,25,16,28,8
+    COMBOBOX        IDC_COMBO_COLUMN,65,14,66,135,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "标题(&H)",IDC_STATIC,25,44,30,11
+    EDITTEXT        IDC_EDIT_HEADER,65,43,66,12,ES_AUTOHSCROLL
+    LTEXT           "字段(&D)",IDC_STATIC,25,69,36,8
+    COMBOBOX        IDC_COMBO_DATAFIELD,65,67,66,111,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&R重置",IDC_BUTTON_RESET,69,98,48,19
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX_KCOMDBGRID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_PROPPAGE_KCOMDBGRID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_PROPPAGE_KCOMDBGRID_COLUMNS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 125
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_KCOMDBGRID          REGISTRY DISCARDABLE    "..\\KCOMDBGrid.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PROPPAGE_KCOMDBGRID DLGINIT
+BEGIN
+    IDC_COMBO_DATAMODE, 0x403, 5, 0
+0x6942, 0x646e, "\000" 
+    IDC_COMBO_DATAMODE, 0x403, 7, 0
+0x614d, 0x756e, 0x6c61, "\000" 
+    IDC_COMBO_GRIDLINESTYLE, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_COMBO_GRIDLINESTYLE, 0x403, 6, 0
+0x6f48, 0x6972, 0x007a, 
+    IDC_COMBO_GRIDLINESTYLE, 0x403, 5, 0
+0x6556, 0x7472, "\000" 
+    IDC_COMBO_GRIDLINESTYLE, 0x403, 5, 0
+0x6f42, 0x6874, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_KCOMDBGRID          "KCOMDBGrid 控件"
+    IDS_KCOMDBGRID_PPG      "KCOMDBGrid 属性页"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_KCOMDBGRID_PPG_CAPTION "综合"
+    IDS_KCOMDBGRID_PPG_COLUMNS "KCOMDBGRID 属性页"
+    IDS_KCOMDBGRID_PPG_COLUMNS_CAPTION "列"
+    IDS_GLSTYLE_NONE        "无"
+    IDS_GLSTYLE_HORIZ       "水平"
+    IDS_GLSTYLE_VERT        "垂直"
+    IDS_GLSTYLE_BOTH        "纵横"
+    IDS_ERROR_NODATASOURCEINMANUALMODE "手动模式中不能设置数据源"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_GENERAL       "操作数据失败"
+    IDS_ERROR_UNABLETOINSERTROW "插入行失败"
+    IDS_ERROR_NOSETCOLATDESIGNTIME "设计状态下不能设置当前列"
+    IDS_ERROR_NOSETROWATDESIGNTIME "设计状态下不能设置当前行"
+    IDS_ERROR_NOSETTEXTATDESIGNTIME "设计状态下不能设置当前文本"
+    IDS_ERROR_NOCHANGETOMANUALMODE "有数据源时不能切换到手动模式"
+    IDS_DATAMODE_BIND       "绑定"
+    IDS_DATAMODE_MANUAL     "手动"
+    IDS_ERROR_NOSETCOLSINBINDMODE "绑定模式下不能设置列数"
+    IDS_ERROR_NOSETROWSINBINDMODE "绑定模式下不能设置行数"
+    IDS_ERROR_ERRORFIELDSEPARATOR 
+                            "分隔符只能是一个字符，或者是 ""(tab"", ""(space)"""
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "l.chs\afxctl.rc"
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

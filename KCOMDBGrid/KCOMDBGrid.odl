@@ -1,0 +1,147 @@
+// KCOMDBGrid.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (KCOMDBGrid.tlb) that will become a resource in
+// KCOMDBGrid.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(AC212643-FBE2-11D2-A7FE-0080C8763FA4), version(1.0),
+  helpfile("KCOMDBGrid.hlp"),
+  helpstring("KCOMDBGrid ActiveX Control module"),
+  control ]
+library KCOMDBGRIDLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+	importlib("msdatsrc.tlb");
+
+	//  Primary dispatch interface for CKCOMDBGridCtrl
+
+	typedef enum
+	{
+		[helpstring("Bind")]	dmBind = 0,
+		[helpstring("Manual")]	dmManual = 1
+	} DataBindMode;
+
+	typedef enum
+	{
+		[helpstring("Both")]	glsBoth = 3,
+		[helpstring("Vert")]	glsVert = 2,
+		[helpstring("Horiz")]	glsHoriz = 1,
+		[helpstring("None")]	glsNone = 0
+	} GLStyle;
+
+	[ uuid(AC212644-FBE2-11D2-A7FE-0080C8763FA4),
+	  helpstring("Dispatch interface for KCOMDBGrid Control"), hidden ]
+	dispinterface _DKCOMDBGrid
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CKCOMDBGridCtrl)
+			[id(3), helpstring("Sets/returns source of grid data")] DataSource* DataSource;
+			[id(4), helpstring("Sets/returns source of grid data")] BSTR DataMember;
+			[id(5), helpstring("Shows/hides selection panel at left border")] VARIANT_BOOL ShowRecordSelector;
+			[id(6), helpstring("Enable/disable interactive record addition")] VARIANT_BOOL AllowAddNew;
+			[id(7), helpstring("Enable/disable interactive record deletion")] VARIANT_BOOL AllowDelete;
+			[id(8), helpstring("Enable/disable interactive record modification")] VARIANT_BOOL ReadOnly;
+			[id(9), helpstring("Sets/returns height of header rows")] long HeaderHeight;
+			[id(10), helpstring("Sets/returns height of all content rows")] long RowHeight;
+			[id(11), helpstring("Enable/disable use of arrow keys for grid navigation")] VARIANT_BOOL AllowArrowKeys;
+			[id(12), helpstring("Enable/disable interactive row resizing")] VARIANT_BOOL AllowRowSizing;
+			[id(1), bindable, requestedit, helpstring("Sets/returns the background color of header in the grid")] OLE_COLOR HeaderBackColor;
+			[id(DISPID_FORECOLOR), bindable, requestedit, helpstring("Sets/returns the text color of data cells in the grid")] OLE_COLOR ForeColor;
+			[id(13), helpstring("Sets/returns current column number")] long Col;
+			[id(14), helpstring("Sets/returns column width for auto-created columns")] long DefColWidth;
+			[id(15), helpstring("Sets/returns heading font object")] IFontDisp* HeaderFont;
+			[id(16), helpstring("Sets/returns overall grid font object")] IFontDisp* Font;
+			[id(17), helpstring("Sets/returns display line of row number")] long Row;
+			[id(18), helpstring("Returns number of visible columns")] long VisibleCols;
+			[id(19), helpstring("Returns number of visible rows")] long VisibleRows;
+			[id(20), helpstring("Sets/returns data input mode")] DataBindMode DataMode;
+			[id(21), helpstring("Sets/returns the number of columns in non-bind mode, 255 max")] long Cols;
+			[id(22), helpstring("Sets/returns the number of rows in non-bind mode")] long Rows;
+			[id(23), helpstring("Sets/returns the visibility of the grid line")] GLStyle GridLineStyle;
+			[id(2), bindable, requestedit, helpstring("Sets/returns the background color of data cells in the grid")] OLE_COLOR BackColor;
+			[id(24), helpstring("Sets/returns the field separator used for an AddItem grid.")] BSTR FieldSeparator;
+			[id(25), helpstring("Sets/returns the caption of the grid")] BSTR Caption;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CKCOMDBGridCtrl)
+			[id(DISPID_REFRESH), helpstring("Updates the grid's screen display")] void Refresh();
+			[id(26), helpstring("Identifies a column under an X coordinate")] long ColContaining(long x);
+			[id(27), helpstring("Identifies a row under a Y coordinate")] long RowContaining(long y);
+			[id(28), helpstring("Scroll the grid by given columns and rows")] void Scroll(long Cols, long Rows);
+			[id(29), helpstring("Insert a new row before given row index in non-bound mode, default insert at the bottom")] void InsertRow([optional] VARIANT RowBefore);
+			[id(30), helpstring("Insert a new col before given col index in non-bound mode, default insert at the most right")] void InsertCol([optional] VARIANT ColBefore);
+			[id(31), helpstring("Delete a row at given row index in non-bound mode, default delete at the bottom")] void DeleteRow([optional] VARIANT RowIndex);
+			[id(32), helpstring("Delete a col at given col index in non-bound mode, default delete at the most right")] void DeleteCol([optional] VARIANT ColIndex);
+			[id(33), propget] long ColWidth(short ColIndex);
+			[id(33), propput] void ColWidth(short ColIndex, long nNewValue);
+			[id(34), propget, helpstring("Sets/returns the text of the given cell")] BSTR CellText(short RowIndex, short ColIndex);
+			[id(34), propput, helpstring("Sets/returns the text of the given cell")] void CellText(short RowIndex, short ColIndex, BSTR lpszNewValue);
+			[id(35), propget, helpstring("Sets/returns the text of the given row")] BSTR RowText(short RowIndex);
+			[id(35), propput, helpstring("Sets/returns the text of the given row")] void RowText(short RowIndex, BSTR lpszNewValue);
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CKCOMDBGridCtrl
+
+	[ uuid(AC212645-FBE2-11D2-A7FE-0080C8763FA4),
+	  helpstring("Event interface for KCOMDBGrid Control") ]
+	dispinterface _DKCOMDBGridEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CKCOMDBGridCtrl)
+			[id(DISPID_KEYDOWN), helpstring("Occurs when a key is pressed")] void KeyDown(short* KeyCode, short Shift);
+			[id(DISPID_KEYPRESS), helpstring("Occurs when an ANSI key is pressed and released")] void KeyPress(short* KeyAscii);
+			[id(1), helpstring("Fired after column data is edited")] void AfterColEdit(short ColIndex);
+			[id(2), helpstring("Occurs after data moves from cell to the grid buffer")] void AfterColUpdate(short ColIndex);
+			[id(3), helpstring("Occurs after record deletion from grid")] void AfterDelete();
+			[id(4), helpstring("Occurs after record insertion in grid")] void AfterInsert();
+			[id(5), helpstring("Occurs after record changes are written to the database")] void AfterUpdate();
+			[id(6), helpstring("Fired upon an attempt to edit column data")] void BeforeColEdit(short ColIndex, short KeyAscii, short* Cancel);
+			[id(7), helpstring("Occurs before record deletion from grid")] void BeforeDelete(short* Cancel);
+			[id(8), helpstring("Occurs before record changes are written to the database")] void BeforeUpdate(short* Cancel);
+			[id(9), helpstring("Occurs when the grid contents have changed")] void Change();
+			[id(DISPID_CLICK), helpstring("Fired when a mouse click occurs")] void Click();
+			[id(10), helpstring("Occurs before repainting the grid when a column has been resized")] void ColResize(short ColIndex, short* Cancel);
+			[id(11), helpstring("Occurs before record insertion in grid")] void BeforeInsert(short* Cancel);
+			[id(DISPID_DBLCLICK), helpstring("Fired when a mouse double click occurs")] void DblClick();
+			[id(12), helpstring("Occurs when a column header has been clicked")] void HeadClick(short ColIndex);
+			[id(13), helpstring("Occurs when a different cell becomes current")] void RolColChange();
+			[id(14), helpstring("Occurs when rows are resized")] void RowResize(short* Cancel);
+			[id(15), helpstring("Occurs when the grid is scrolled using the scrollbars")] void Scroll(short* Cancel);
+			[id(DISPID_MOUSEMOVE), helpstring("Occurs when the mouse moves")] void MouseMove(short Button, short Shift, OLE_XPOS_PIXELS x, OLE_YPOS_PIXELS y);
+			[id(16), helpstring("Occurs before data moves from cell to the grid buffer")] void BeforeColUpdate(short ColIndex, VARIANT* OldValue, short* Cancel);
+			[id(DISPID_MOUSEUP), helpstring("Occurs when a mouse button is released")] void MouseUp(short Button, short Shift, OLE_XPOS_PIXELS x, OLE_YPOS_PIXELS y);
+			[id(DISPID_MOUSEDOWN), helpstring("Occurs when a mouse button is pressed")] void MouseDown(short Button, short Shift, OLE_XPOS_PIXELS x, OLE_YPOS_PIXELS y);
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CKCOMDBGridCtrl
+
+	[ uuid(AC212646-FBE2-11D2-A7FE-0080C8763FA4), licensed,
+	  helpstring("KCOMDBGrid Control"), control ]
+	coclass KCOMDBGrid
+	{
+		[default] dispinterface _DKCOMDBGrid;
+		[default, source] dispinterface _DKCOMDBGridEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

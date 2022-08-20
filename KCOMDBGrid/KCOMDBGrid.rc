@@ -1,0 +1,312 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""KCOMDBGrid.tlb""\r\n"
+    "#include ""afxctl.h""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "BHM\0"
+            VALUE "FileDescription", "KCOMDBGrid ActiveX Control Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "KCOMDBGrid\0"
+            VALUE "LegalCopyright", "Copyright (C) 1999\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "KCOMDBGrid.OCX\0"
+            VALUE "ProductName", "KCOMDBGrid ActiveX Control Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ABOUTDLL            ICON    DISCARDABLE     "KCOMDBGrid.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_KCOMDBGRID          BITMAP  DISCARDABLE     "KCOMDBGridCtl.bmp"
+IDB_BITMAP_HEADER       BITMAP  DISCARDABLE     "bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX_KCOMDBGRID DIALOG DISCARDABLE  34, 22, 232, 105
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About KCOMDBGrid Control"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDI_ABOUTDLL,IDC_STATIC,10,10,21,23
+    LTEXT           "KCOMDBGrid Control, Version 1.0",IDC_STATIC,40,10,137,8
+    LTEXT           "Copyright (C) 1999, KCOMSoft",IDC_STATIC,40,25,170,8
+    DEFPUSHBUTTON   "OK",IDOK,193,7,32,14,WS_GROUP
+    LTEXT           "Specially thanks for Mr. Chris Maunder for providing grid window class. \n\nchrismaunder@codeguru.com",
+                    IDC_STATIC,38,46,123,47
+END
+
+IDD_PROPPAGE_KCOMDBGRID DIALOG DISCARDABLE  0, 0, 258, 161
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,15,13,88,134
+    LTEXT           "Data&Mode",IDC_STATIC,25,28,34,8
+    COMBOBOX        IDC_COMBO_DATAMODE,60,25,39,61,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Record&Selector",IDC_CHECK_SHOWRECORDSELECTOR,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,25,45,67,10
+    CONTROL         "AllowAdd&New",IDC_CHECK_ALLOWADDNEW,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,25,61,67,10
+    CONTROL         "Allow&Delete",IDC_CHECK_ALLOWDELETE,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,25,77,67,10
+    CONTROL         "&ReadOnly",IDC_CHECK_READONLY,"Button",BS_AUTOCHECKBOX | 
+                    BS_LEFTTEXT | WS_TABSTOP,25,93,67,10
+    CONTROL         "AllowArrow&Keys",IDC_CHECK_ALLOWARROWKEYS,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,25,109,67,10
+    CONTROL         "AllowRow&Sizing",IDC_CHECK_ALLOWAROWRESIZING,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,25,125,67,10
+    LTEXT           "Ro&ws",IDC_STATIC,111,28,20,13
+    EDITTEXT        IDC_EDIT_ROWS,134,25,36,15,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_ROWS,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,169,29,12,12
+    LTEXT           "&Cols",IDC_STATIC,179,28,20,13
+    EDITTEXT        IDC_EDIT_COLS,202,25,37,15,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_COLS,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,239,25,12,12
+    LTEXT           "DefCol&Width",IDC_STATIC,111,53,49,8
+    EDITTEXT        IDC_EDIT_DEFCOLWIDTH,174,51,65,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "&HeaderHeight",IDC_STATIC,111,78,50,8
+    EDITTEXT        IDC_EDIT_HEADERHEIGHT,174,75,65,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "&RowHeight",IDC_STATIC,111,101,36,8
+    EDITTEXT        IDC_EDIT_ROWHEIGHT,174,99,65,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Grid&Line Style",IDC_STATIC,111,128,62,8
+    COMBOBOX        IDC_COMBO_GRIDLINESTYLE,174,124,65,61,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PROPPAGE_KCOMDBGRID_COLUMNS DIALOG DISCARDABLE  0, 0, 187, 137
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Column",IDC_STATIC,25,16,28,8
+    COMBOBOX        IDC_COMBO_COLUMN,65,14,66,135,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Header",IDC_STATIC,25,44,30,11
+    EDITTEXT        IDC_EDIT_HEADER,65,43,66,12,ES_AUTOHSCROLL
+    LTEXT           "&DataField",IDC_STATIC,25,69,36,8
+    COMBOBOX        IDC_COMBO_DATAFIELD,65,67,66,111,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Reset",IDC_BUTTON_RESET,69,96,48,19
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX_KCOMDBGRID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_PROPPAGE_KCOMDBGRID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_PROPPAGE_KCOMDBGRID_COLUMNS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_KCOMDBGRID          REGISTRY DISCARDABLE    "KCOMDBGrid.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PROPPAGE_KCOMDBGRID DLGINIT
+BEGIN
+    IDC_COMBO_DATAMODE, 0x403, 5, 0
+0x6942, 0x646e, "\000" 
+    IDC_COMBO_DATAMODE, 0x403, 7, 0
+0x614d, 0x756e, 0x6c61, "\000" 
+    IDC_COMBO_GRIDLINESTYLE, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_COMBO_GRIDLINESTYLE, 0x403, 6, 0
+0x6f48, 0x6972, 0x007a, 
+    IDC_COMBO_GRIDLINESTYLE, 0x403, 5, 0
+0x6556, 0x7472, "\000" 
+    IDC_COMBO_GRIDLINESTYLE, 0x403, 5, 0
+0x6f42, 0x6874, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_KCOMDBGRID          "KCOMDBGrid Control"
+    IDS_KCOMDBGRID_PPG      "KCOMDBGrid Property Page"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_KCOMDBGRID_PPG_CAPTION "General"
+    IDS_KCOMDBGRID_PPG_COLUMNS "KCOMDBGRID Property Page"
+    IDS_KCOMDBGRID_PPG_COLUMNS_CAPTION "Columns"
+    IDS_GLSTYLE_NONE        "None"
+    IDS_GLSTYLE_HORIZ       "Horiz"
+    IDS_GLSTYLE_VERT        "Vert"
+    IDS_GLSTYLE_BOTH        "Both"
+    IDS_ERROR_NODATASOURCEINMANUALMODE "Can not set datasource in manual mode"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERROR_GENERAL       "Error occured"
+    IDS_ERROR_UNABLETOINSERTROW "Unable to insert row"
+    IDS_ERROR_NOSETCOLATDESIGNTIME "Can not set col at design time"
+    IDS_ERROR_NOSETROWATDESIGNTIME "Can not set row at design time"
+    IDS_ERROR_NOSETTEXTATDESIGNTIME "Can not set text at design time"
+    IDS_ERROR_NOCHANGETOMANUALMODE 
+                            "Can not change to manual mode while having datasource"
+    IDS_DATAMODE_BIND       "Bind"
+    IDS_DATAMODE_MANUAL     "Manual"
+    IDS_ERROR_NOSETCOLSINBINDMODE "Can not set cols in bind mode"
+    IDS_ERROR_NOSETROWSINBINDMODE "Can not set rows in bind mode"
+    IDS_ERROR_ERRORFIELDSEPARATOR 
+                            "Separator can only be one char, or ""(tab"", ""(space)"""
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "KCOMDBGrid.tlb"
+#include "afxctl.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
