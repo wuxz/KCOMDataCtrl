@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{029288E9-2FFF-11D3-B446-0080C8F18522} = s 'KCOMData'
+		'KCOMData.EXE'
+		{
+			val AppID = s {029288E9-2FFF-11D3-B446-0080C8F18522}
+		}
+	}
+}

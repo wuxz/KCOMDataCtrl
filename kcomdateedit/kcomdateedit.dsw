@@ -1,0 +1,39 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "KCOMDateEdit"=.\KCOMDateEdit.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CCode/KCOMDateEdit", BEBAAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/CCode/KCOMDateEdit", OFCAAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+    {43478D73-78E0-11CF-8E78-00A0D100038E}
+    {C932BA85-4374-101B-A56C-00AA003668DC}
+}}}
+
+###############################################################################
+

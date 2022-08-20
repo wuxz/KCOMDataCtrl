@@ -1,0 +1,316 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DATEPICKER DIALOG DISCARDABLE  0, 0, 151, 113
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP
+FONT 10, "Times New Roman"
+BEGIN
+    COMBOBOX        IDC_COMBO_MONTH,6,2,46,114,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_EDIT_YEAR,76,2,46,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_YEAR,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,127,2,16,17
+END
+
+IDD_ABOUTBOX_KCOMDATEEDIT DIALOG DISCARDABLE  34, 22, 210, 76
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About KCOMDateEdit Control"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         1,-1,"Static",SS_BITMAP,10,10,11,11
+    LTEXT           "KCOMDateEdit Control, Version 1.0",-1,37,10,136,8
+    LTEXT           "Copyright (C) 1999, KCOMSoft",-1,47,30,115,8
+    DEFPUSHBUTTON   "OK",IDOK,88,55,32,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DATEPICKER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 144
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 106
+    END
+
+    IDD_ABOUTBOX_KCOMDATEEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DATEPICKER DLGINIT
+BEGIN
+    IDC_COMBO_MONTH, 0x403, 4, 0
+0x614a, 0x006e, 
+    IDC_COMBO_MONTH, 0x403, 4, 0
+0x6546, 0x0062, 
+    IDC_COMBO_MONTH, 0x403, 4, 0
+0x614d, 0x0072, 
+    IDC_COMBO_MONTH, 0x403, 4, 0
+0x7041, 0x0072, 
+    IDC_COMBO_MONTH, 0x403, 4, 0
+0x614d, 0x0079, 
+    IDC_COMBO_MONTH, 0x403, 4, 0
+0x754a, 0x006e, 
+    IDC_COMBO_MONTH, 0x403, 4, 0
+0x754a, 0x006c, 
+    IDC_COMBO_MONTH, 0x403, 4, 0
+0x7541, 0x0067, 
+    IDC_COMBO_MONTH, 0x403, 4, 0
+0x6553, 0x0070, 
+    IDC_COMBO_MONTH, 0x403, 4, 0
+0x634f, 0x0074, 
+    IDC_COMBO_MONTH, 0x403, 4, 0
+0x6f4e, 0x0076, 
+    IDC_COMBO_MONTH, 0x403, 4, 0
+0x6544, 0x0063, 
+    0
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""KCOMDateEdit.tlb""\r\n"
+    "#include ""afxctl.rc""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,1
+ PRODUCTVERSION 2,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "KCOMSoft Co.\0"
+            VALUE "FileDescription", "KCOMDateEdit ActiveX Control Module\0"
+            VALUE "FileVersion", "2, 0, 0, 1\0"
+            VALUE "InternalName", "KCOMDateEdit\0"
+            VALUE "LegalCopyright", "Copyright (C) 1998\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OLESelfRegister", "\0"
+            VALUE "OriginalFilename", "KCOMDateEdit.OCX\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "KCOMDateEdit ActiveX Control Module\0"
+            VALUE "ProductVersion", "2, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_KCOMDateEdit        BITMAP  DISCARDABLE     "KCOMDateEditCtl.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_KCOMDateEdit        "KCOMDateMask Control"
+    IDS_KCOMDateEdit_PPG    "KCOMDateMask  Property Page"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_KCOMDateEdit_PPG_CAPTION "Format"
+    IDS_ERROR_INVALIDFORMAT "Invalid Format!"
+    IDS_ERROR_INVALIDDISPLAYFORMAT "Invalid DisplayFormat!"
+    IDS_APPEARANCE_FLAT     "0 - Flat"
+    IDS_APPEARANCE_3D       "1 - 3D"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPPAGE_KCOMDateEdit DIALOG DISCARDABLE  0, 0, 296, 108
+STYLE WS_CHILD
+FONT 8, "Arial"
+BEGIN
+    GROUPBOX        "Style",IDC_STATIC,3,5,132,92
+    CONTROL         "yyyy/mm/dd",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,12,17,54,11
+    CONTROL         "yy/mm/dd",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,12,34,
+                    49,11
+    CONTROL         "mm dd'yy",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,12,49,
+                    49,11
+    CONTROL         "mm/dd",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,12,66,49,
+                    11
+    CONTROL         "mm/dd/yyyy",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,12,
+                    83,53,11
+    CONTROL         "dd/mm/yy",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,77,17,
+                    49,11
+    CONTROL         "dd/mm/yyyy",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,77,
+                    29,53,11
+    CONTROL         "mm/yy",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,77,43,49,
+                    11
+    CONTROL         "mm/dd/yy",IDC_RADIO9,"Button",BS_AUTORADIOBUTTON,77,57,
+                    49,11
+    CONTROL         "ggg/mm/dd",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,77,
+                    68,49,11
+    CONTROL         "MingGuo",IDC_RADIO11,"Button",BS_AUTORADIOBUTTON,77,83,
+                    49,11
+    CONTROL         "Read Only",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,145,9,46,10
+    LTEXT           "Format:",IDC_STATIC,145,26,29,8
+    EDITTEXT        IDC_EDIT1,204,25,85,12,ES_LOWERCASE | ES_AUTOHSCROLL
+    LTEXT           "Display Format:",IDC_STATIC,145,41,49,8
+    EDITTEXT        IDC_EDIT2,204,39,85,12,ES_LOWERCASE | ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO1,204,53,85,40,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Alignment:",IDC_STATIC,145,56,41,10
+    LTEXT           "&Appearance:",IDC_STATIC,145,73,45,6
+    COMBOBOX        IDC_COMBO_APPEARANCE,204,69,85,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&BorderStyle:",IDC_STATIC,145,86,42,6
+    COMBOBOX        IDC_COMBO_BORDERSTYLE,204,84,85,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PROPPAGE_KCOMDateEdit DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 9, 0
+0x2030, 0x202d, 0x654c, 0x7466, "\000" 
+    IDC_COMBO1, 0x403, 11, 0
+0x2031, 0x202d, 0x6543, 0x746e, 0x7265, "\000" 
+    IDC_COMBO1, 0x403, 10, 0
+0x2032, 0x202d, 0x6952, 0x6867, 0x0074, 
+    IDC_COMBO_APPEARANCE, 0x403, 9, 0
+0x2030, 0x202d, 0x6c46, 0x7461, "\000" 
+    IDC_COMBO_APPEARANCE, 0x403, 7, 0
+0x2031, 0x202d, 0x4433, "\000" 
+    IDC_COMBO_BORDERSTYLE, 0x403, 9, 0
+0x2030, 0x202d, 0x6f4e, 0x656e, "\000" 
+    IDC_COMBO_BORDERSTYLE, 0x403, 16, 0
+0x2031, 0x202d, 0x6953, 0x676e, 0x656c, 0x4c20, 0x6e69, 0x0065, 
+    0
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "KCOMDateEdit.tlb"
+#include "afxctl.rc"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

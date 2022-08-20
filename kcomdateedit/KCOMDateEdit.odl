@@ -1,0 +1,88 @@
+// KCOMDateEdit.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (KCOMDateEdit.tlb) that will become a resource in
+// KCOMDateEdit.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(F6D0E404-2D34-11D2-9A46-0080C8763FA4), version(1.0),
+  helpfile("KCOMDateEdit.hlp"),
+  helpstring("KCOM DateMask ActiveX Control module"),
+  control ]
+library KCOMDateEditLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CKCOMDateEditCtrl
+
+	[ uuid(F6D0E405-2D34-11D2-9A46-0080C8763FA4),
+	  helpstring("Dispatch interface for KCOM DateMask Control"), hidden ]
+	dispinterface _DKCOMDateEdit
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CKCOMDateEditCtrl)
+			[id(3), helpstring("The format used to input date")] BSTR DateFormat;
+			[id(4), helpstring("The format used to display date")] BSTR DisplayDateFormat;
+			[id(DISPID_FONT), bindable] IFontDisp* Font;
+			[id(DISPID_BORDERSTYLE), bindable, requestedit, helpstring("Determines the border style for an object.")] short BorderStyle;
+			[id(DISPID_FORECOLOR), bindable, requestedit] OLE_COLOR ForeColor;
+			[id(5), helpstring("The current data")] BSTR Text;
+			[id(1), helpstring("Is the control readonly")] VARIANT_BOOL ReadOnly;
+			[id(6), helpstring("The direction the text in control be written")] short TextAlign;
+			[id(DISPID_BACKCOLOR), bindable, requestedit] OLE_COLOR BackColor;
+			[id(2), helpstring("Can the user enter negative year when the year format is ggg")] VARIANT_BOOL CanYearNegative;
+			[id(DISPID_ENABLED), bindable, requestedit] VARIANT_BOOL Enabled;
+			[id(DISPID_APPEARANCE), bindable, requestedit, helpstring("Determines whether the control has a flat or sunken 3d appearance")] short Appearance;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CKCOMDateEditCtrl)
+			[id(7), helpstring("set the date value")] void SetDate(short nYear, short nMonth, short nDay);
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CKCOMDateEditCtrl
+
+	[ uuid(F6D0E406-2D34-11D2-9A46-0080C8763FA4),
+	  helpstring("Event interface for KCOM DateMask Control") ]
+	dispinterface _DKCOMDateEditEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CKCOMDateEditCtrl)
+			[id(DISPID_CLICK)] void Click();
+			[id(DISPID_DBLCLICK)] void DblClick();
+			[id(DISPID_KEYDOWN)] void KeyDown(short* KeyCode, short Shift);
+			[id(DISPID_KEYPRESS)] void KeyPress(short* KeyAscii);
+			[id(DISPID_KEYUP)] void KeyUp(short* KeyCode, short Shift);
+			[id(1), helpstring("occurs when the date value changed")] void Change();
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CKCOMDateEditCtrl
+
+	[ uuid(F6D0E407-2D34-11D2-9A46-0080C8763FA4),
+	  helpstring("KCOMDateMask Control"), control ]
+	coclass KCOMDateEdit
+	{
+		[default] dispinterface _DKCOMDateEdit;
+		[default, source] dispinterface _DKCOMDateEditEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};
