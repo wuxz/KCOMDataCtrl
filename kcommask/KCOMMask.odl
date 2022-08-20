@@ -1,0 +1,90 @@
+// KCOMMask.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (KCOMMask.tlb) that will become a resource in
+// KCOMMask.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(D1728E22-4985-11D3-A7FE-0080C8763FA4), version(1.0),
+  helpfile("KCOMMask.hlp"),
+  helpstring("KCOMMask ActiveX Control module"),
+  control ]
+library KCOMMASKLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CKCOMMaskCtrl
+
+	[ uuid(D1728E23-4985-11D3-A7FE-0080C8763FA4),
+	  helpstring("Dispatch interface for KCOMMask Control"), hidden ]
+	dispinterface _DKCOMMask
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CKCOMMaskCtrl)
+			[id(1), helpstring("Determines whether prompt characters are contained in the Text property value.")] VARIANT_BOOL PromptInclude;
+			[id(2), helpstring("Determines whether or not the next control in the tab order receives the focus.")] VARIANT_BOOL AutoTab;
+			[id(DISPID_FONT), bindable, helpstring("Font Property")] IFontDisp* Font;
+			[id(3), helpstring("Determines the maximum length of the masked edit control.")] short MaxLength;
+			[id(4), helpstring("Determines Input Mask Format\n	#: 0 - 9;\n9: # + Space;\n?: a- z or A - Z;\nC:? + Space;\nA:# + ?;\na:ASC(32-126) or ASC(128 - 255)")] BSTR Mask;
+			[id(5), helpstring("Determines the number of characters selected.")] long SelLength;
+			[id(6), helpstring("Determines the starting point of text selected.")] long SelStart;
+			[id(7), helpstring("Determines the string containing the currently selected text.")] BSTR SelText;
+			[id(8), helpstring("Returns the text in the masked edit control, excluding literal characters of the input mask.")] BSTR ClipText;
+			[id(9), helpstring("Determines the character used to prompt a user for input.")] BSTR PromptChar;
+			[id(10), helpstring("Determines the text contained in the control.")] BSTR Text;
+			[id(DISPID_APPEARANCE), bindable, requestedit, helpstring("Determines whether the control has a flat or sunken 3d appearance")] short Appearance;
+			[id(DISPID_BACKCOLOR), bindable, requestedit, helpstring("Determines the background color used to display text and graphics in an object.")] OLE_COLOR BackColor;
+			[id(DISPID_FORECOLOR), bindable, requestedit, helpstring("Determines the foreground color used to display text and graphics in an object.")] OLE_COLOR ForeColor;
+			[id(DISPID_BORDERSTYLE), bindable, requestedit, helpstring("Determines the border style for an object.")] short BorderStyle;
+			[id(0)] BSTR _Text;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CKCOMMaskCtrl)
+			[id(DISPID_REFRESH), helpstring("Forces a complete repaint of a form or control.")] void Refresh();
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CKCOMMaskCtrl
+
+	[ uuid(D1728E24-4985-11D3-A7FE-0080C8763FA4),
+	  helpstring("Event interface for KCOMMask Control") ]
+	dispinterface _DKCOMMaskEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CKCOMMaskCtrl)
+			[id(1), helpstring("Indicates that the contents of a control have changed.")] void Change();
+			[id(DISPID_KEYDOWN), helpstring("Occurs when the user presses a key while an object has the focus.")] void KeyDown(short* KeyCode, short Shift);
+			[id(DISPID_KEYPRESS), helpstring("Occurs when the user presses and releases an ANSI key.")] void KeyPress(short* KeyAscii);
+			[id(DISPID_KEYUP), helpstring("Occurs when the user releases a key while an object has the focus.")] void KeyUp(short* KeyCode, short Shift);
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CKCOMMaskCtrl
+
+	[ uuid(D1728E25-4985-11D3-A7FE-0080C8763FA4),
+	  helpstring("KCOMMask Control"), control ]
+	coclass KCOMMask
+	{
+		[default] dispinterface _DKCOMMask;
+		[default, source] dispinterface _DKCOMMaskEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

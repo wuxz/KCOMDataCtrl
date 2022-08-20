@@ -1,0 +1,228 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""KCOMMask.tlb""\r\n"
+    "#include ""afxctl.rc""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "BHM\0"
+            VALUE "FileDescription", "KCOMMask ActiveX Control Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "KCOMMask\0"
+            VALUE "LegalCopyright", "Copyright (C) 1999\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "KCOMMask.OCX\0"
+            VALUE "ProductName", "KCOMMask ActiveX Control Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ABOUTDLL            ICON    DISCARDABLE     "KCOMMask.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_KCOMMASK            BITMAP  DISCARDABLE     "KCOMMaskCtl.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX_KCOMMASK DIALOG DISCARDABLE  34, 22, 233, 73
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About KCOMMask Control"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         IDI_ABOUTDLL,IDC_STATIC,"Static",SS_BITMAP,10,10,21,23
+    LTEXT           "KCOMMask Control, Version 1.0",IDC_STATIC,56,10,120,8
+    LTEXT           "Copyright (C) 1999, KCOMSoft",IDC_STATIC,59,30,115,8
+    DEFPUSHBUTTON   "OK",IDOK,99,55,32,14,WS_GROUP
+END
+
+IDD_PROPPAGE_KCOMMASK DIALOG DISCARDABLE  0, 0, 250, 114
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Mask:",IDC_STATIC,8,30,21,8
+    EDITTEXT        IDC_EDIT_MASK,59,28,85,12,ES_AUTOHSCROLL
+    LTEXT           "&Appearance:",IDC_STATIC,8,57,51,8
+    COMBOBOX        IDC_COMBO_APPEARANCE,59,55,85,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&BorderStyle:",IDC_STATIC,8,84,51,8
+    COMBOBOX        IDC_COMBO_BORDERSTYLE,59,82,85,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "A&utoTab",IDC_CHECK_AUTOTATB,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,162,28,45,10
+    CONTROL         "&PromptInclude",IDC_CHECK_PROMPTINCLUDE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,162,47,64,10
+    LTEXT           "Max&Length:",IDC_STATIC,162,66,39,8
+    EDITTEXT        IDC_EDIT_MAXLENGTH,209,64,32,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "P&romptChar:",IDC_STATIC,162,84,46,8
+    EDITTEXT        IDC_EDIT_PROMPTCHAR,209,82,32,13
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX_KCOMMASK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 226
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_PROPPAGE_KCOMMASK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PROPPAGE_KCOMMASK DLGINIT
+BEGIN
+    IDC_COMBO_APPEARANCE, 0x403, 9, 0
+0x2030, 0x202d, 0x6c46, 0x7461, "\000" 
+    IDC_COMBO_APPEARANCE, 0x403, 7, 0
+0x2031, 0x202d, 0x4433, "\000" 
+    IDC_COMBO_BORDERSTYLE, 0x403, 9, 0
+0x2030, 0x202d, 0x6f4e, 0x656e, "\000" 
+    IDC_COMBO_BORDERSTYLE, 0x403, 16, 0
+0x2031, 0x202d, 0x6953, 0x676e, 0x656c, 0x4c20, 0x6e69, 0x0065, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_KCOMMASK            "KCOMMask Control"
+    IDS_KCOMMASK_PPG        "KCOMMask Property Page"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_KCOMMASK_PPG_CAPTION "General"
+    IDS_APPEARANCE_FLAT     "0 - Flat"
+    IDS_APPEARANCE_3D       "1 - 3D"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "KCOMMask.tlb"
+#include "afxctl.rc"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
